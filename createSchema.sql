@@ -34,10 +34,11 @@ CREATE TABLE CRCARD (
 
 -- not entirely sure if this one is right
 CREATE TABLE STORE (
-    Code NUMBER PRIMARY KEY,
+    Code VARCHAR2(2) PRIMARY KEY,
     Name VARCHAR2(100),
     CONSTRAINT uk_store_name UNIQUE (Name)
 );
+
 
 -- a lot going on in this one
 CREATE TABLE ExpMast (
