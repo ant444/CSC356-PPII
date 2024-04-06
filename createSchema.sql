@@ -70,6 +70,6 @@ CREATE TABLE ExpByCC (
     CONSTRAINT pk_expByCC PRIMARY KEY (ExpNum, ccNum),
     CONSTRAINT fk_expByCC_expMast FOREIGN KEY (ExpNum) REFERENCES ExpMast (ExpNum),
     CONSTRAINT fk_expByCC_CRCARD FOREIGN KEY (ccNum) REFERENCES CRCARD (ccNum)
-};
+);
 
     
