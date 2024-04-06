@@ -45,7 +45,7 @@ CREATE TABLE ExpMast (
     ExpNum NUMBER GENERATED ALWAYS AS IDENTITY,
     ExpDate DATE,
     CashAmt NUMBER(10,2),
-    StoreCode NUMBER,
+    StoreCode VARCHAR(2),
     CONSTRAINT pk_expMast PRIMARY KEY (ExpNum),
     CONSTRAINT fk_expMast_store FOREIGN KEY (StoreCode) REFERENCES STORE (Code)
 );
