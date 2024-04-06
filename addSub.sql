@@ -48,6 +48,7 @@ VALUES (1020, NULL, 'DVD Movies', TO_DATE('01/01/21', 'MM/DD/YY'), NULL);
 INSERT INTO SUBHEAD (HCode, SubCode, Name, SDate, OpBal)
 VALUES (1030, NULL, 'Dining', TO_DATE('01/01/21', 'MM/DD/YY'), NULL);
 
+-- This doesn't have a matching Code in Head, so it gives error. 
 INSERT INTO SUBHEAD (HCode, SubCode, Name, SDate, OpBal)
 VALUES (1040, NULL, 'Hotels', TO_DATE('01/07/21', 'MM/DD/YY'), NULL);
 
