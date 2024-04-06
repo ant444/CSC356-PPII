@@ -48,3 +48,27 @@ CREATE TABLE ExpMast (
     CONSTRAINT fk_expMast_store FOREIGN KEY (StoreCode) REFERENCES STORE (Code)
 );
 
+
+
+-- creates ExptDet table, makes PKs for ExpNum and LineNum
+-- makes constraints / FKs for expNum, HCode & SubCode 
+CREATE TABLE ExpDet (
+    ExpNum NUMBER,
+    LineNum NUMBER,
+    Descrip VARCHAR2(255),
+    Amt NUMBER(10,2),
+    CONSTRAINT pk_expDet PRIMARY KEY (ExpNum, LineNum),
+    CONSTRAINT fk_expDet_expMast FOREIGN KEY (ExpNum) REFERENCES ExpMast (ExpNum),
+    CONSTRAINT fk_expDet_subhead FOREIGN KEY (HCode, SubCode) REFERENCES SUBHEAD (HCode, SubCode)
+);
+
+CREATE TABLE ExpByCC (
+    ExpNum NUMBER,
+    ccNum VARCHAR2(16),
+    Amt NUMBER(10,2),
+    CONSTRAINT pk_expByCC PRIMARY KEY (ExpNum, ccNum),
+    CONSTRAINT fk_expByCC_expMast FOREIGN KEY (ExpNum) REFERENCES ExpMast (ExpNum),
+    CONSTRAINT fk_expByCC_CRCARD FOREIGN KEY (ccNum) REFERENCES CRCARD (ccNum)
+};
+
+    
