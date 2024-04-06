@@ -34,8 +34,9 @@ CREATE TABLE CRCARD (
 
 -- not entirely sure if this one is right
 CREATE TABLE STORE (
-    Name VARCHAR2(30) PRIMARY KEY,
-    Code NUMBER
+    Code NUMBER PRIMARY KEY,
+    Name VARCHAR2(100),
+    CONSTRAINT uk_store_name UNIQUE (Name)
 );
 
 -- a lot going on in this one
