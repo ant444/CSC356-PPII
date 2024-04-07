@@ -177,4 +177,4 @@ VALUES (
 
 -- Inserting expense by Cash data
 INSERT INTO ExpMast (CashAmt)
-VALUES ((SELECT MAX(ExpNum) FROM ExpMast), 65.00);
+VALUES (65.00);
