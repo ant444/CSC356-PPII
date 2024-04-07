@@ -59,6 +59,8 @@ CREATE TABLE ExpDet (
     LineNum NUMBER,
     Descrip VARCHAR2(255),
     Amt NUMBER(10,2),
+    HCode NUMBER,
+    SubCode NUMBER,
     CONSTRAINT pk_expDet PRIMARY KEY (ExpNum, LineNum),
     CONSTRAINT fk_expDet_expMast FOREIGN KEY (ExpNum) REFERENCES ExpMast (ExpNum),
     CONSTRAINT fk_expDet_subhead FOREIGN KEY (HCode, SubCode) REFERENCES SUBHEAD (HCode, SubCode)
