@@ -1,16 +1,18 @@
---File addExpDet.sql
+  -- File: addexpDet.sql
+  
+  
+  ACCEPT ExpNum PROMPT	'Enter Expense Number: '
+  
+  SELECT * FROM ExpDet	        
+  Where ExpNum	= '&ExpNum' ;
+  
+  ACCEPT LineNum PROMPT 'Enter	Line Number: '
+  ACCEPT DESCRIP PROMPT 'Enter Description: '
+  ACCEPT AMT PROMPT 'Enter Amount: $'
+  ACCEPT HCODE	PROMPT 'Enter HCODE: '
+  ACCEPT SUBCODE PROMPT 'ENTER	SubCode:'
+ 
+  INSERT INTO ExpDet (ExpNum, LineNum,	Descrip, Amt, HCode, SubCode)
+  VALUES ('&ExpNum', '&LineNum', '&Descrip', '&Amt', '&HCode',	'&SubCode') ;
+      
 
-ACCEPT exp_number PROMPT 'Enter Expense Number: '
-
--- Display existing data in ExpDet for the given expense number
-SELECT * FROM ExpDet WHERE ExpNumber = '&exp_number';
-
--- Prompt for line-item info
-ACCEPT item_name PROMPT 'Enter Item Name: '
-ACCEPT quantity PROMPT 'Enter Quantity: '
-ACCEPT unit_price PROMPT 'Enter Unit Price: '
-
-INSERT INTO ExpDet (ExpNumber, ItemName, Quantity, UnitPrice)
-VALUES ('&exp_number', '&item_name', '&quantity', '&unit_price');
-
-COMMIT;
