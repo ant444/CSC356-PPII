@@ -19,5 +19,3 @@ DROP TABLE STORE;
 -- Commit the changes
 COMMIT;
 
--- Exit SQL*Plus
-EXIT;
