@@ -2,10 +2,10 @@
 
 ACCEPT given_date PROMPT 'Enter Date (YYYY-MM-DD): '
 
-SELECT ExpNumber, ExpDate, VendorName, Amount
+SELECT ExpNumber, ExpDate, Store, CashAmt
 FROM ExpMast
 WHERE ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD');
 
-SELECT SUM(Amount) AS TotalAmount
+SELECT SUM(CashAmt) AS TotalAmount
 FROM ExpMast
 WHERE ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD');
