@@ -1,5 +1,5 @@
  -- File: getexp2d.sql
- ACCEPT given_date PROMPT 'Enter Date (YYYY-MM-DD): '
+ ACCEPT given_date PROMPT 'Enter Date (DD-MON-YY): '
    
  COLUMN ExpNum FORMAT 999999
  COLUMN ExpDate FORMAT A10
@@ -10,11 +10,11 @@
  SELECT ExpDet.ExpNum, ExpMast.ExpDate, ExpDet.Descrip, ExpDet.Amt AS TotalAmount
  FROM ExpDet
  JOIN ExpMast ON ExpDet.ExpNum = ExpMast.ExpNum
- WHERE ExpMast.ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD')
+ WHERE ExpMast.ExpDate = '&given_date'
  UNION ALL
  SELECT NULL, NULL, 'Total Amount:', SUM(Amt) AS TotalAmount
  FROM ExpDet
  JOIN ExpMast ON ExpDet.ExpNum = ExpMast.ExpNum
- WHERE ExpMast.ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD');
+ WHERE ExpMast.ExpDate = '&given_date'
  
 
