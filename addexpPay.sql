@@ -7,10 +7,10 @@ SELECT * FROM ExpByCC WHERE ExpNumber = '&exp_number';
 
 -- Prompt for payment info
 ACCEPT cc_number PROMPT 'Enter Credit Card Number: '
-ACCEPT payment_date PROMPT 'Enter Payment Date (YYYY-MM-DD): '
+ACCEPT payment_date PROMPT 'Enter Payment Date (DD-MON-YY): '
 ACCEPT amount PROMPT 'Enter Amount: '
 
 INSERT INTO ExpByCC (ExpNumber, CCNumber, PaymentDate, Amount)
-VALUES ('&exp_number', '&cc_number', TO_DATE('&payment_date', 'YYYY-MM-DD'), '&amount');
+VALUES ('&exp_number', '&cc_number','&payment_date', '&amount');
 
 COMMIT;
