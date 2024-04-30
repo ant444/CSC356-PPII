@@ -4,7 +4,7 @@
 -- Semester & Year: Spring 2024
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
--- File: addexpDet.sql
+-- Filename: addexpDet.sql
   
   
   ACCEPT ExpNum PROMPT	'Enter Expense Number: '
