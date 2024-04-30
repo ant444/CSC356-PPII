@@ -4,6 +4,6 @@
 -- Semester & Year: Spring 2024
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
--- File: allheads.sql
+-- Filename: allheads.sql
 
 -- not sure yet
