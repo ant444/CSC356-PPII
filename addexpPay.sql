@@ -4,7 +4,7 @@
 -- Semester & Year: Spring 2024
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
--- File: addexpPay.sql
+-- Filename: addexpPay.sql
 
 ACCEPT exp_number PROMPT 'Enter Expense Number: '
 
