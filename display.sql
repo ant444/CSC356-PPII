@@ -1,3 +1,11 @@
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename: display.sql
+
 COLUMN CODE FORMAT 9999
 COLUMN NAME FORMAT A25
 COLUMN H FORMAT A1
