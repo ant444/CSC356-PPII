@@ -4,7 +4,7 @@
 -- Semester & Year: Spring 2024
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
--- addExpense.sql
+-- Filename: addExpense.sql
 
 -- Expense #1
 -- Inserting expense mast data
