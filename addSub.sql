@@ -4,7 +4,7 @@
 -- Semester & Year: Spring 2024
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
--- addSub.sql
+-- Filename: addSub.sql
 
 -- Inserting data into the SUBHEAD table
 
