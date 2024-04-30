@@ -4,7 +4,7 @@
 -- Semester & Year: Spring 2024
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
--- addStore.sql
+-- Filename: addStore.sql
  
 -- Inserting stores
 INSERT INTO STORE (Name, Code) VALUES ('Walmart', 'WM');
