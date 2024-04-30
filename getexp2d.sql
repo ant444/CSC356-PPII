@@ -1,4 +1,11 @@
- -- File: getexp2d.sql
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename: getexp2d.sql
+
  ACCEPT given_date PROMPT 'Enter Date (DD-MON-YY): '
    
  COLUMN ExpNum FORMAT 999999
