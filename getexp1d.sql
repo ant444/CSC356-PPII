@@ -5,28 +5,27 @@
 -- Instructor: Dr. Hussain
 -- Assignment #: Project Phase II
 -- Filename: getexp1d.sql
+PROMPT The following script displays all expenses on a given date:
+ACCEPT given_date PROMPT 'Enter Date (DD-MON-YY): '
 
- ACCEPT given_date PROMPT 'Enter Date (YYYY-MM-DD): '
- 
- -- Display all expenses (without details) incurred on the given date and calculate total expense
- SELECT ExpNum, ExpDate, CashAmt AS TotalAmount
- FROM ExpMast
- WHERE ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD')
- UNION ALL
- SELECT ExpByCC.ExpNum, ExpMast.ExpDate, Amt AS TotalAmount
- FROM ExpByCC
- JOIN ExpMast ON ExpByCC.ExpNum = ExpMast.ExpNum
- WHERE ExpMast.ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD')
- UNION ALL
- SELECT NULL, NULL, SUM(TotalAmount) AS TotalAmount
- FROM (
-     SELECT CashAmt AS TotalAmount
-     FROM ExpMast
-     WHERE ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD')
-     UNION ALL
-     SELECT Amt AS TotalAmount
-     FROM ExpByCC
-     JOIN ExpMast ON ExpByCC.ExpNum = ExpMast.ExpNum
-     WHERE ExpMast.ExpDate = TO_DATE('&given_date', 'YYYY-MM-DD')
- );
+SET VERIFY OFF
+
+PROMPT The following expenses occurred on &given_date
+SELECT
+    LPAD(ExpNum, 5) AS Exp#,
+    TO_CHAR(ExpDate, 'DD-Mon-YY') AS ExpDate,
+    LPAD('$' || TO_CHAR(CashAmt, '999.99'), 12) AS ExpAmount,
+    LPAD(s.Name, 9) AS Store -- s.Name is the store name from the Store table
+FROM ExpMast e
+JOIN Store s ON e.StoreCode = s.Code
+WHERE e.ExpDate = TO_DATE('&given_date', 'DD-MON-YY')
+UNION ALL
+SELECT NULL, NULL, NULL, 'Total Expense Amount: $' || TO_CHAR(SUM(CashAmt), '999.99')
+FROM ExpMast
+WHERE ExpDate = TO_DATE('&given_date', 'DD-MON-YY');
+
+PROMPT PL/SQL procedure successfully completed.
+SET VERIFY ON
+
+
  
