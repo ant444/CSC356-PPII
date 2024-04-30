@@ -1,4 +1,11 @@
--- File: getexp1d.sql
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename: getexp1d.sql
+
  ACCEPT given_date PROMPT 'Enter Date (YYYY-MM-DD): '
  
  -- Display all expenses (without details) incurred on the given date and calculate total expense
