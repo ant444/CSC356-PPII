@@ -1,0 +1,18 @@
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename:   addExpMast.txt
+
+SQL> @addExpMast.sql
+Enter Expense Date (DD-MMM-YY): 03-MAY-21
+Enter Cash Amount Spent: $12
+Enter the Store Code: WM
+old   2: VALUES ('&ExpDate', '&CashAmt', '&StoreCode')
+new   2: VALUES ('03-MAY-21', '12', 'WM')
+
+1 row created.
+
+SQL> spool off
