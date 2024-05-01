@@ -1,0 +1,27 @@
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename:   getexp2d.txt
+
+SQL> @getexp2d.sql
+The following script displays details of all expenses on a given date:
+Enter Expense Date: (DD-MON-YY)
+01-Mar-21
+The following expenses occurred on 01-Mar-21
+Exp#   Exp Date        Exp Amount         Store
+------ --------------- ------------------ ---------
+5      01-MAR-21         $  65.00         Misc.
+Paid in Cash: $  65.00
+Total Expense Amount: $  65.00
+7      01-MAR-21         $  20.00         Walmart
+Paid in Cash: $  20.00
+Paid by Credit Card (CCNUM: 1000200030004000): $   7.00
+Total Expense Amount: $  92.00
+
+PL/SQL procedure successfully completed.
+
+SQL> spool off
+
