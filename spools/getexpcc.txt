@@ -1,0 +1,31 @@
+
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename:   getexpcc.txt
+
+SQL> @getexpcc.sql
+Enter Start Date (DD-MMM-YY): 01-Jan-21
+Enter End Date (DD-MMM-YY): 01-Jan-24
+Enter Credit Card Number: 1000200030004000
+old   4: WHERE ExpByCC.ccNum = '&cc_number'
+new   4: WHERE ExpByCC.ccNum = '1000200030004000'
+old   5:   AND ExpMast.ExpDate BETWEEN '&start_date' AND '&end_date'
+new   5:   AND ExpMast.ExpDate BETWEEN '01-Jan-21' AND '01-Jan-24'
+old  10: WHERE ExpByCC.ccNum = '&cc_number'
+new  10: WHERE ExpByCC.ccNum = '1000200030004000'
+old  11:   AND ExpMast.ExpDate BETWEEN '&start_date' AND '&end_date'
+new  11:   AND ExpMast.ExpDate BETWEEN '01-Jan-21' AND '01-Jan-24'
+
+EXPNUM EXPDATE    CCNUM            TOTALAMOUNT
+------ ---------- ---------------- -----------
+     1 17-JAN-21  1000200030004000	 53.88
+     2 18-JAN-21  1000200030004000	 78.35
+     7 01-MAR-21  1000200030004000           7
+                                        139.23
+
+SQL> spool off
+
