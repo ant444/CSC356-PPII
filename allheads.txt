@@ -1,0 +1,70 @@
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename:   allheads.txt
+
+SQL> @allheads.sql
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Cash
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Chase Account
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Entertainment
+1010        Bluray Movies            $    01-JAN-21
+1020        DVD Movies               $    01-JAN-21
+1030        Dining                   $    01-JAN-21
+1040        Hotels                   $    07-JAN-21
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Grocery
+1010        Meat                     $    01-JAN-21
+1020        Snacks                   $      .00    07-JAN-21
+1030        Milk                     $    01-JAN-21
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Misc. Expense
+1010        Sales Tax                $      .00    01-JAN-21
+1020        Income Tax               $      .00    07-JAN-21
+1030        Discount                 $    07-JAN-21
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: PNC Account
+1010        PNC Bank A/C *3210       $  2000.00    01-JAN-21
+1020        PNC Bank A/C *4050       $      .00    07-JAN-21
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Utilities
+1010        Gas                      $      .00    07-JAN-21
+1020        Electricity              $   678.43    07-JAN-21
+1030        Phone                    $    08-JAN-21
+
+
+SubCode      Name                      Opbal     Date
+------------ ------------------------- --------- -------
+Head: Wells Fargo Account
+1010        Wells Fargo Chk#1        $  1000.00    01-JAN-21
+
+PL/SQL procedure successfully completed.
+
+SQL> spool off
+
