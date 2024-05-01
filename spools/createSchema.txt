@@ -1,0 +1,39 @@
+-- Name: Anthony Nelson
+-- Major: Computer Science
+-- Course: CSC 356 - Intro To Database Management Systems
+-- Semester & Year: Spring 2024
+-- Instructor: Dr. Hussain
+-- Assignment #: Project Phase II
+-- Filename: createSchema.txt
+
+
+SQL> @createSchema.sql
+Creating HEAD Table
+
+Table created.
+
+Creating SUBHEAD Table
+
+Table created.
+
+Creating CRCARD Table
+
+Table created.
+
+Creating STORE Table
+
+Table created.
+
+Creating ExpMast Table
+
+Table created.
+
+Creating ExpDet Table
+
+Table created.
+
+Creating ExpByCC Table
+
+Table created.
+
+SQL> spool off
